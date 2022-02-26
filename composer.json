@@ -6,7 +6,6 @@
     "workerman/webman-framework": "^1.2.1",
 	  "symfony/console": "^5.0",
     "robmorgan/phinx": "^0.12.5",
-    "vlucas/phpdotenv": ">=4.1,<6.0",
     "illuminate/database": "^8.83"
   },
   "autoload": {

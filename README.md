@@ -17,7 +17,7 @@ illuminate/database
 
 ### 配置
 
-```
+``` php
 //config/plugin/qifen/phinx/phinx.php
 <?php
 
@@ -33,13 +33,14 @@ return [
         "default_database" => "dev",
         "default_environment" => "dev",
         "dev" => [
-            "adapter" => env('DB_CONNECTION', 'mysql'),
-            "host" => env('DB_HOST', '127.0.0.1'),
-            "name" => env('DB_DATABASE', 'forge'),
-            "user" => env('DB_USERNAME', 'forge'),
-            "pass" => env('DB_PASSWORD', ''),
-            "port" => env('DB_PORT', '3306'),
-            "charset" => "utf8"
+            "adapter" => config('database.connections.mysql.driver'),
+            "host" => config('database.connections.mysql.host'),
+            "name" => config('database.connections.mysql.database'),
+            "user" => config('database.connections.mysql.username'),
+            "pass" => config('database.connections.mysql.password'),
+            "port" => config('database.connections.mysql.port'),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_0900_ai_ci'
         ]
     ],
     "migration_base_class" => \Qifen\phinx\Commands\MigrationBaseClass::class,
