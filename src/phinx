@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/support/bootstrap.php';
+
+use Qifen\phinx\Command;
+$cli = new Command();
+$cli->setName('phinx cli');
+$cli->installInternalCommands();
+$cli->run();
